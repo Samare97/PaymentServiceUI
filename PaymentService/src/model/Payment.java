@@ -95,9 +95,9 @@ public class Payment {
 			}
 			
 			
-			output="<table class=\"table\" border =\"1\">"
-					+ "<tr><th>NIC</th><th>CardNo</th><th>Amount</th>"
-					+ "<th>Update</th><th>Remove</th></tr>";
+			output="<table class=\"table table-striped\" >"
+					+ "<thead><tr><th>NIC</th><th>CardNo</th><th>Amount</th>"
+					+ "<th>Update</th><th>Remove</th></tr></thead>";
 			
 			String query="select * from payments";
 			Statement statement = con.createStatement();
@@ -115,8 +115,8 @@ public class Payment {
 						+ "value='"+ id + "'>" + nic +"</td>";
 			
 				//output += "<tr><th>" + nic +"</th>";
-				output += "<th>" + cardno + "</th>";
-				output += "<th>" + amount + "</th>";
+				output += "<td>" + cardno + "</td>";
+				output += "<td>" + amount + "</td>";
 				
 				
 				/*output += "<td><input type=\"button\" name=\"btnUpdate\" value=\"update\"></td>"
@@ -125,7 +125,7 @@ public class Payment {
 						+ "<input name=\"id\" type=\"hidden\" value=\"" + id + "\">" + "</form></td></tr>" ;
 				*/
 				 output += "<td><input name='btnUpdate' type='button' "
-					 		+ "value='Update'class='btnUpdate btn btn-secondary'></td> "
+					 		+ "value='Update' class='btnUpdate btn btn-secondary'></td> "
 					 		+ "<td><input name='btnRemove' type='button' value='Remove' "
 					 		+ "class='btnRemove btn btn-danger' data-itemid='" 
 							 + id + "'>" + "</td></tr>";

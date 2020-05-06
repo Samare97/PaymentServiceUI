@@ -84,13 +84,13 @@ public class SecurityFilter implements ContainerRequestFilter {
 					WebTarget webTarget;
 
 					if (rolesSet.contains("patient")) {
-						webTarget = client.target("http://localhost:8090/AuthService/AuthService").path("users/patient");
+						webTarget = client.target("http://localhost:8081/AuthService/AuthService").path("users/patient");
 					} else if (rolesSet.contains("doctor")) {
-						webTarget = client.target("http://localhost:8090/AuthService/AuthService").path("users/doctor");
+						webTarget = client.target("http://localhost:8081/AuthService/AuthService").path("users/doctor");
 					} else if (rolesSet.contains("admin")) {
-						webTarget = client.target("http://localhost:8090/AuthService/AuthService").path("users/admin");
+						webTarget = client.target("http://localhost:8081/AuthService/AuthService").path("users/admin");
 					} else {
-						webTarget = client.target("http://localhost:8090/AuthService/AuthService")
+						webTarget = client.target("http://localhost:8081/AuthService/AuthService")
 								.path("users/deny");
 					}
 

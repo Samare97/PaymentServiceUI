@@ -35,7 +35,7 @@ public class PaymentServices {
 	
 	@RolesAllowed({ "admin","patient" })
 	@GET
-	@Path("/readPayment")
+	@Path("/")
 	@Produces(MediaType.TEXT_HTML)
 	public String readPayment()
 	{

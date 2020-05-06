@@ -33,9 +33,9 @@ $(document).on("click","#btnSave",function(event) {
 
 					var type = ($("#hidItemIDSave").val() == "") ? "POST"
 							: "PUT";
-					serviceUrl = "http://localhost:8090/PaymentService/PaymentService/Payments/"
+					serviceUrl = "http://localhost:8081/PaymentService/PaymentServices/payments"
 					if (type == "PUT") {
-						serviceUrl = "http://localhost:8090/PaymentService/PaymentService/Payments/"
+						serviceUrl = "http://localhost:8081/PaymentService/PaymentServices/payments"
 							payment["pID"] = $("#hidItemIDSave").val()
 					}
 					
@@ -77,7 +77,7 @@ $(document).on("click",".btnRemove",function(event) {
 					var r = confirm("Do you want to delete this record");
 					if (r == true) {
 						
-						serviceUrl = "http://localhost:8090/PaymentService/PaymentService/Payments/"
+						serviceUrl = "http://localhost:8081/PaymentService/PaymentServices/payments"
 							
 							
 						$.ajax({
@@ -173,7 +173,7 @@ function onItemDeleteComplete(response, status) {
 
 function refresh() {
 
-	serviceUrl = "http://localhost:8090/PaymentService/PaymentService/Payments/"
+	serviceUrl = "http://localhost:8081/PaymentService/PaymentServices/payments/"
 	$.ajax({
 		dataType : 'html',
 		url : serviceUrl,
