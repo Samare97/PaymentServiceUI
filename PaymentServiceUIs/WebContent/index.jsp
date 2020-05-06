@@ -13,7 +13,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4">
-<!-- jkjkj -->
+
 				<h1 id="heading">Insert Payment</h1>
 
 				<form id="formPayment" name="formPayment">
