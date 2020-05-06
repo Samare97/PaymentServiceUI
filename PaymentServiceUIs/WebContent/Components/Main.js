@@ -100,7 +100,7 @@ $(document).on("click",".btnRemove",function(event) {
 
 
 function validateItemForm() {
-	//  nic
+	//  NIC
 	if ($("#nic").val().trim() == "") {
 		return "Insert NIC number.";
 	}
