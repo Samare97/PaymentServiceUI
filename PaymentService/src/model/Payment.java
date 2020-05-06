@@ -51,6 +51,8 @@ public class Payment {
 				
 			PreparedStatement preparedStatement = (PreparedStatement) con.prepareStatement(query);
 			
+			
+			
 			preparedStatement.setInt(1, 0);
 			preparedStatement.setString(2, nic);
 			preparedStatement.setInt(3, Integer.parseInt(cardno));

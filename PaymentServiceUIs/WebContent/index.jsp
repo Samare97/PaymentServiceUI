@@ -63,7 +63,8 @@
 								<th>NIC Number</th>
 								<th>Card Number</th>
 								<th>Amount</th>
-								
+								<th>Update</th>
+								<th>Remove</th>
 							</tr>
 						</thead>
 						<tbody>
